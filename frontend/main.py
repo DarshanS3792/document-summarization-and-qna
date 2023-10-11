@@ -182,17 +182,17 @@ def summarization():
     page_config()
     custom_css()
     
-    col1, col2 = st.columns(spec=[0.1, 0.9])
+    col1, col2 = st.columns(spec=[0.08, 0.92])
            
     with col1:
         st_lottie("https://lottie.host/7d468c6d-1115-4fe1-9963-019a4bad95f3/HbnPMZtxjc.json", speed=2, quality="high", height=90, width=75)   
         
     with col2:
-        st.title(':violet[OKTANE.ai]')
+        st.title(':blue[HAI7.ai]')
         # st.image(image="gallery/Title-Image-dark.png", width=150)         
 
     st.caption("_Smart Document Companion: Summarize, Understand, and Interact with Ease_")
-    st.subheader("", divider='violet')
+    st.subheader("", divider='blue')
     
     # Horizontal menu   
     selected = option_menu(None, ["Document Summarization", "Document Q&A"], 
