@@ -1,4 +1,4 @@
-# doc-summarization-and-qna
+# document-summarization-and-qna
 
 1. To use this application, you must create an API Key with OpenAI.
 
