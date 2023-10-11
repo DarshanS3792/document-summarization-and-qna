@@ -1,0 +1,13 @@
+# OPEN-AI Configuration
+
+OPENAI_API_KEY = "Paste-your-Open-ai-key-here"
+DEFAULT_MODEL = "gpt-3.5-turbo-0613"
+LARGE_CONTEXT_MODEL = "gpt-3.5-turbo-16k-0613"
+
+# Directory References
+KNOWLDGE_BASE_DIR = "knowledge_base"
+FAISS_DB_DIR = "vector_store/db_faiss"
+
+# Embedding Parameters
+CHUNK_SIZE = 1000
+CHUNK_OVERLAP = 100
