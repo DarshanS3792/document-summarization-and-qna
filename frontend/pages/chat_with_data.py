@@ -126,13 +126,7 @@ def chat_with_data():
     page_config()
     custom_css()
     
-    col1, col2 = st.columns(spec=[0.16, 0.84])
-           
-    with col1:
-        st.image(image="gallery/Title-Image-dark-small.png") 
-        
-    with col2:
-        st_lottie("https://lottie.host/7d468c6d-1115-4fe1-9963-019a4bad95f3/HbnPMZtxjc.json", speed=2, quality="high", height=93, width=90)      
+    st_lottie("https://lottie.host/7d468c6d-1115-4fe1-9963-019a4bad95f3/HbnPMZtxjc.json", speed=2, quality="high", height=125, width=125)      
 
     st.caption("_Smart Document Companion: Summarize, Understand, and Interact with Ease_")
     st.subheader("", divider='blue')
@@ -150,7 +144,7 @@ def chat_with_data():
     #     st.warning("Invalid Open AI API Key. Please re-configure your Open AI API Key.")
 
     # Create tabs for Ingest and Query pages
-    ingest_tab, query_tab = st.tabs(["**Ingest Data**", "**Query Documents**"])
+    ingest_tab, query_tab = st.tabs(["**Ingest Data**", "**Ask Questions**"])
 
     with ingest_tab:
         input_options = st.radio("Options", ["**Document(s)**", "**URL**", "**YouTube URL**"], horizontal=True, label_visibility="hidden")
@@ -164,7 +158,7 @@ def chat_with_data():
                     2. To extract text content from documents and create a vector database, select **Process Documents**.
                     3. After a successful build, the **Files in vector database** count should always be 2.
                     4. You can also reset the vector database by clicking the **Clear Database** button.
-                    5. You can then proceed to ask queries regarding documents in the **Query Documents** tab.
+                    5. You can then proceed to ask queries regarding documents in the **Ask Questions** tab.
 
                     """
                 )
@@ -179,7 +173,7 @@ def chat_with_data():
                     2. To extract text content from an url and create a vector database, select **Extract Content**.
                     3. After a successful build, the **Files in vector database** count should always be 2.
                     4. You can also reset the vector database by clicking the **Clear Database** button.
-                    5. You can then proceed to ask queries regarding documents in the **Query Documents** tab.
+                    5. You can then proceed to ask queries regarding documents in the **Ask Questions** tab.
                     
                     """
                 )
@@ -192,7 +186,7 @@ def chat_with_data():
                     2. To extract the transcript from a YouTube url and create a vector database, select **Extract Transcript**.
                     3. After a successful build, the **Files in vector database** count should always be 2.
                     4. You can also reset the vector database by clicking the **Clear Database** button.
-                    5. You can then proceed to ask queries regarding documents in the **Query Documents** tab.
+                    5. You can then proceed to ask queries regarding documents in the **Ask Questions** tab.
                     
                     """
                 )

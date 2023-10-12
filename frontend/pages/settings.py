@@ -1,3 +1,4 @@
+import base64
 import os
 import sys
 import shutil
@@ -24,6 +25,16 @@ def page_config():
         page_icon="❇️",
         layout="wide",
     )
+    with open("gallery/Title-Image-dark-small.png", "rb") as f:
+        data = base64.b64encode(f.read()).decode("utf-8")
+    st.sidebar.markdown(
+        f"""
+        <div style="display:table;margin-top:-30%; margin-left:2%;">
+            <img src="data:image/png;base64,{data}" >
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     if "valid_key" not in st.session_state:
         st.session_state.valid_key = False
@@ -35,7 +46,7 @@ def page_config():
             "Input your OpenAI API Key",
             type="password",
             placeholder="🔑",
-            help="You can get your API key from https://platform.openai.com/account/api-keys.",
+            help="You can get your API key from https://platform.openai.com/account/api-keys",
             value=st.session_state.get("OPEN_API_KEY", ""),
         )
         configure_api_key = api_key_form.form_submit_button("Configure")
