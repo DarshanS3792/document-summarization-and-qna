@@ -15,7 +15,7 @@ def set_open_api_key(api_key: str):
     st.session_state.OPENAI_API_KEY = api_key
     st.session_state.valid_key = True
     st.session_state.open_api_key_configured = True
-    print("OPENAI API key is configured successfully!")
+    print("OPENAI API key is configured successfully")
 
 # Set Page Config
 def page_config():
@@ -38,7 +38,7 @@ def page_config():
             help="You can get your API key from https://platform.openai.com/account/api-keys.",
             value=st.session_state.get("OPEN_API_KEY", ""),
         )
-        configure_api_key = api_key_form.form_submit_button("Configure API Key")
+        configure_api_key = api_key_form.form_submit_button("Configure")
 
         if configure_api_key:
             # Validate the API Key
@@ -47,12 +47,12 @@ def page_config():
                 if test_gpt.validate_key():
                     set_open_api_key(openai_api_key_input)
                 else:
-                    st.error("Invalid API Key. Please re-configure with valid API Key")
+                    st.error("Invalid API Key. Please re-configure with valid API key")
 
         if not st.session_state.get("open_api_key_configured"):
-            st.warning("Please configure your OpenAI API key!")
+            st.warning("Please configure your OpenAI API key")
         else:
-            st.success("OpenAI API key is configured!")
+            st.success("OpenAI API key is configured")
             st.session_state.gpt = GPT_UTILS(
                 api_key=st.session_state.get("OPENAI_API_KEY", "")
             )    
