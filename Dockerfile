@@ -15,7 +15,7 @@ RUN .venv/bin/pip install --no-cache-dir -r requirements.txt && find /app/.venv 
 FROM python:3.11-slim
 # WorkDir 
 WORKDIR /app
-# Copy dependcies from base image
+# Copy dependencies from base image
 COPY --from=base /app /app
 ENV PATH="$PATH:/app/.venv/bin"
 # Copy App Files to app directory
