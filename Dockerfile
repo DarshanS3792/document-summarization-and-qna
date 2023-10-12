@@ -23,6 +23,7 @@ COPY .streamlit/* /app/.streamlit/
 COPY .env /app/
 COPY frontend/ /app/frontend/
 COPY src/* /app/src/
+COPY gallery/* /app/gallery/
 # Expose default Streamlit UI port
 EXPOSE 8501
 # Run streamlit
